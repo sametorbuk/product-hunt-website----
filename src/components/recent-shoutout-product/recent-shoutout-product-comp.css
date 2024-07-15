@@ -1,0 +1,26 @@
+.recent-product-comp-div{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.recent-product-info{
+    display: flex;
+}
+
+
+.recent-product-photo{
+    width: 2.5rem;
+    border-radius: 2rem;
+}
+
+
+.recent-product-explanation{
+    display: flex;
+    flex-direction: column;
+}
+
+.recent-product-info-explanation{
+    display: flex;
+}

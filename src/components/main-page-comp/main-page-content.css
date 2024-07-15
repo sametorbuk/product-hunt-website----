@@ -19,8 +19,8 @@
 .main-page-content-right{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-
+    gap: 2rem;
+    margin-top: 6rem;
 }
 
 

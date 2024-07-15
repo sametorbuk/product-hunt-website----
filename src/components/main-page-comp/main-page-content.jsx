@@ -3,6 +3,7 @@ import React from 'react';
 
 import "./main-page-content.css"
 import DailyProductComp from "../product-comp/daily-product-comp/daily-product-comp"
+import RecentShoutoutProductComp from '../recent-shoutout-product/recent-shoutout-product-comp';
 
 
 export default function MainPageContent() {
@@ -22,7 +23,8 @@ export default function MainPageContent() {
 
         </div>
         <div className="main-page-content-right">
-          <h2>SAMET</h2>
+
+         <RecentShoutoutProductComp/>
 
         </div>
 
