@@ -1,0 +1,43 @@
+.main-page-content {
+    display: flex;
+    padding: 0rem 9rem;
+}
+
+
+
+
+.main-page-content-left {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    gap: 2rem;
+
+}
+
+
+
+.main-page-content-right{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+
+.main-page-content-left-row1{
+    display: flex;
+}
+
+
+.main-page-content-left-row1 button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    font-weight: bold;
+    color: rgb(93, 92, 92);
+}
+
+.main-page-content-left-row1 button:focus{
+    color: #e12e;
+}

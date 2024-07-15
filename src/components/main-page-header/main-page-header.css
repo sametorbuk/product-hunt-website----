@@ -1,0 +1,69 @@
+.main-page-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
+}
+
+
+
+.main-page-header-left{
+    display: flex;
+    gap: 1rem;
+}
+
+.header-nav{
+    display: flex;
+    gap: 1.5rem;
+}
+
+
+.main-page-logo {
+    width: 2rem;
+}
+
+
+
+.main-page-header-sucscribe-and-sign-btn-div{
+    display: flex;
+    gap:1.5rem;
+}
+
+
+.header-nav button:hover{
+    color:orange;
+}
+
+.header-nav button {
+    background: none;
+    border: none;
+    color: gray;
+    font-size: 1rem;
+}
+
+
+.main-page-header-sucscribe-and-sign-btn-div button:nth-child(1) {
+    color: #e12e;
+    border: none;
+    background-color: #ff868f24;
+    border-radius: 4px;
+}
+
+
+.main-page-header-sucscribe-and-sign-btn-div button:nth-child(2){
+    background: #ee4211c4;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+}
+
+
+.options-btn {
+    border-radius: 16px;
+    background: #b3b3f747;
+    font-weight: bold;
+    padding: 0.3rem;
+    border: none;
+}

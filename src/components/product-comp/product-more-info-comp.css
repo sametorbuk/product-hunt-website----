@@ -1,0 +1,78 @@
+
+
+
+
+
+.product-more-info {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background: rgb(254, 253, 253);
+    width: 48rem;
+    height: 45rem;
+    top: 7rem;
+    padding: 2rem 5rem;
+   border: 1px solid red;
+   z-index: 10;
+}
+
+
+.product-more-info-title-row1{
+    display: flex;
+}
+
+
+.visit-btn{
+    width: 6rem;
+    height: 4rem;
+    border-radius: 6px;
+
+    background: white;
+    border: 0.5px solid gray;
+    cursor: pointer;
+}
+
+.upvote-btn{
+    width: 14rem;
+    height: 4rem;
+    background: #ee4211c4;
+    color: white;
+    margin-left: 13px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+
+.product-more-info-title-row1-left{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    
+}
+
+
+
+
+.product-more-info-interaction-line-div{
+    display: flex;
+    margin-top: 1rem;
+}
+
+
+.product-more-info-interaction-line-div-interaction-btns{
+    display: flex;
+}
+.product-more-info-interaction-line-div-interaction-btns button{
+    border: none;
+    height: 2rem;
+    color: gray;
+    background: none;
+    cursor: pointer;
+}
+
+
+.product-more-info-interaction-line-div-interaction-btns button:hover{
+    color:orange;
+}
