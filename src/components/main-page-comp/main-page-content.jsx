@@ -2,7 +2,7 @@
 import React from 'react';
 
 import "./main-page-content.css"
-import DailyProductComp from "./product-comp/daily-product-comp/daily-product-comp"
+import DailyProductComp from "../product-comp/daily-product-comp/daily-product-comp"
 
 
 export default function MainPageContent() {

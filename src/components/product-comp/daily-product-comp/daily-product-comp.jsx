@@ -18,6 +18,7 @@ export default function DailyProductComp() {
                     secondbtn={item.secondbtn}
                     count={item.count}
                     thirdbtn={item.thirdbtn}
+                    photo={item.photo}
                 />
             ))}
         </>

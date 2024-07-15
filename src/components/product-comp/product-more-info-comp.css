@@ -76,3 +76,49 @@
 .product-more-info-interaction-line-div-interaction-btns button:hover{
     color:orange;
 }
+
+
+
+.commenters {
+    display: flex;
+}
+
+
+.commenters-photo-row1,
+.commenters-photo-row2 {
+
+    display: flex;
+}
+
+
+.commenters-photo {
+    width: 3rem;
+    border-radius: 3rem;
+}
+
+
+
+.commenters-photo-row{
+    display: flex;
+    gap:1rem;
+}
+
+.commenters-prof-photo-div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.comment-area {
+    display: flex;
+    margin-top: 8rem;
+    border-top: 1px solid #8080807a;
+    border-bottom: 1px solid #8080806b;
+    padding: 1rem 0rem;
+}
+
+
+.comment-area-input{
+    flex: 2;
+    border: none;
+}

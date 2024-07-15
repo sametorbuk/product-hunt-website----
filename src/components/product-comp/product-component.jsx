@@ -7,13 +7,13 @@ import {faTwitter , faFacebook , faApple , faLinkedin} from "@fortawesome/free-b
 import { useState , useEffect } from "react";
 import ProductMoreİnfoComponent from "./product-more-info-comp";
 import React from 'react';
-
+ 
 
 export default function ProductComponent(props) {
   const [isModal1Open, setIsModal1Open] = useState(false);
   const [isModal2Open, setIsModal2Open] = useState(false);
 
-  const { logo, name,explanation, count,firstbtn ,secondbtn,thirdbtn}=props
+  const { logo, name,explanation, count,firstbtn ,secondbtn,thirdbtn , photo}=props
 
 
 
@@ -75,7 +75,7 @@ return(<>
 </div>
 </div>
 
-{isModal2Open && <ProductMoreİnfoComponent/> }
+{isModal2Open && <ProductMoreİnfoComponent photo={photo}/> }
 
 
 

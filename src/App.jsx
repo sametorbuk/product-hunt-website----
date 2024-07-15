@@ -3,7 +3,7 @@ import React from 'react';
 
 import './App.css'
 
-import MainPageContent from './components/main-page-content'
+import MainPageContent from './components/main-page-comp/main-page-content'
 import MainPageHeader from './components/main-page-header/main-page-header'
 
 function App() {
