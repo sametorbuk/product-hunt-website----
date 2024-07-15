@@ -19,8 +19,12 @@ export default function DailyProductComp() {
                     count={item.count}
                     thirdbtn={item.thirdbtn}
                     photo={item.photo}
+                    introduction={item.introduction}
                 />
-            ))}
+                        ))}
+       
+       
+       
         </>
     );
 }

@@ -13,7 +13,7 @@ export default function ProductComponent(props) {
   const [isModal1Open, setIsModal1Open] = useState(false);
   const [isModal2Open, setIsModal2Open] = useState(false);
 
-  const { logo, name,explanation, count,firstbtn ,secondbtn,thirdbtn , photo}=props
+  const { logo, name,explanation, count,firstbtn ,secondbtn,thirdbtn , photo , introduction}=props
 
 
 
@@ -75,18 +75,11 @@ return(<>
 </div>
 </div>
 
-{isModal2Open && <ProductMoreİnfoComponent photo={photo}/> }
-
-
-
-
-
-
-
-
-
-
-
+{isModal2Open && <ProductMoreİnfoComponent photo={photo} 
+introduction={introduction} 
+logo={logo} 
+explanation={explanation}
+ name={name}/> }
 
 
 <button onClick={toggleModal1} className="product-component-right-btn">

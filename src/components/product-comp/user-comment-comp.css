@@ -1,0 +1,35 @@
+.user-comment-component {
+    display: flex;
+    margin-top: 2rem;
+}
+
+
+
+
+.user-comment-component-prof-info{
+    display: flex;
+}
+
+
+.comment-interactions-div{
+    display: flex;
+}
+
+
+
+.comment-interactions-btn{
+    border: none;
+    background: white;
+    color: #686767;
+}
+
+.comment-interactions-btn:hover{
+    color: orange;
+    cursor: pointer;
+}
+
+
+.user-comment-content{
+    display: flex;
+    flex-direction: column;
+}

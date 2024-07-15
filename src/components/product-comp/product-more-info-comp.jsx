@@ -2,10 +2,13 @@ import "./product-more-info-comp.css"
 import {faComment , faBookmark , faShare , faChartSimple} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import UserCommmentComp from "./user-comment-comp";
+
+
 
 export default function ProductMoreİnfoComponent(props) {
-    const {photo}=props
-
+   
+ const {photo , introduction , name , explanation , logo} =props
 
     return(<>
     
@@ -14,13 +17,13 @@ export default function ProductMoreİnfoComponent(props) {
     
     <div className="product-more-info">
 
-      <img style={{width:"4rem"}} src="https://ph-files.imgix.net/6985828d-62e6-4dd5-91fc-4f76820648d2.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&w=72&h=72&fit=crop&dpr=2" alt="" />
+      <img style={{width:"4rem"}} src={logo} alt="" />
        <div className="product-more-info-title-row1">
 
        <div className="product-more-info-title-row1-left">
-       <h3 style={{margin:"0"}}>BlitzToksAI
+       <h3 style={{margin:"0"}}>{name}
        </h3>
-       <p>Faceless AI videos to grow your social media</p>
+       <p>{explanation}</p>
 
 
 
@@ -47,10 +50,7 @@ export default function ProductMoreİnfoComponent(props) {
 
        </div>
 
-    <p className="product-introduction"> Save time, ditch expensive editing tools, 
-        and boost your social media presence with seamless video generation. 
-        Our AI-powered platform turns your ideas into high-quality, engaging content instantly. 
-        Focus on growth, not editing.</p>
+    <p className="product-introduction">{introduction} </p>
 
  <p style={{display:"flex", alignItems:"center" , gap:"5px"}}>Launched in
             <button className="options-btn" >Social media</button>
@@ -69,7 +69,7 @@ export default function ProductMoreİnfoComponent(props) {
              <div className="commenters-prof-photo-div">
               
          
-                 {photo.map((item)=> 
+                 {props.photo.map((item)=> 
                      <div className="commenters-photo-row">
                        {item.map((link)=>{
                           
@@ -90,6 +90,13 @@ export default function ProductMoreİnfoComponent(props) {
                 <input className="comment-area-input" type="text" placeholder="What do you think" ></input>
                 <button>Login Comment</button>
             </div>
+
+                 
+                 <UserCommmentComp photo={photo}/>
+
+
+
+
             
             </div>
 
