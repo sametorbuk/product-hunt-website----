@@ -25,19 +25,10 @@ export default function MainPageContent() {
         <div className="main-page-content-right">
 
          <RecentShoutoutProductComp/>
-
+         <RecentShoutoutProductComp/>
+        <RecentShoutoutProductComp/>
         </div>
-
-
-
-        
-        
-        
-        
-        
-        
-        
-        </div>
+</div>
         
         
         

@@ -1,6 +1,10 @@
 .recent-product-comp-div{
     display: flex;
     flex-direction: column;
+    padding: 1rem;
+    border: 1px solid gray;
+    max-width: 14rem;
+   
 }
 
 
@@ -11,7 +15,7 @@
 
 
 .recent-product-photo{
-    width: 2.5rem;
+    width: 2.8rem;
     border-radius: 2rem;
 }
 
@@ -19,8 +23,10 @@
 .recent-product-explanation{
     display: flex;
     flex-direction: column;
+    
 }
 
 .recent-product-info-explanation{
     display: flex;
 }
+

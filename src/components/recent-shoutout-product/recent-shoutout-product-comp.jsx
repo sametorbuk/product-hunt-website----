@@ -18,16 +18,14 @@ export default function RecentShoutoutProductComp(){
                <p>Sugar free: Food Scanner —</p>
                
 
-                  
-
-
-            </div>
+          </div>
 
 
      </div>
      <div className="recent-product-explanation">
 
          <p>Shouted out <FontAwesomeIcon icon={faArrowsSplitUpAndLeft} />Heroku</p>
+         <p >Allows quickly testing multiple open models side-by-side.</p>
       
 
      </div>
