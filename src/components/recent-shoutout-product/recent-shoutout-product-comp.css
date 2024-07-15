@@ -1,9 +1,9 @@
 .recent-product-comp-div{
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    border: 1px solid gray;
+    border: 1px solid #80808078;
     max-width: 14rem;
+    border-radius: 5px;
    
 }
 
@@ -11,6 +11,8 @@
 
 .recent-product-info{
     display: flex;
+    border-bottom:1px solid gray;
+    padding: 0.5rem;
 }
 
 
@@ -23,6 +25,7 @@
 .recent-product-explanation{
     display: flex;
     flex-direction: column;
+    padding: 0.5rem;
     
 }
 
@@ -30,3 +33,8 @@
     display: flex;
 }
 
+
+
+.recent-product-explanation p {
+    margin:0;
+}

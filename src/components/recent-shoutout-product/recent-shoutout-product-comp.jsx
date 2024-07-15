@@ -25,7 +25,7 @@ export default function RecentShoutoutProductComp(){
      <div className="recent-product-explanation">
 
          <p>Shouted out <FontAwesomeIcon icon={faArrowsSplitUpAndLeft} />Heroku</p>
-         <p >Allows quickly testing multiple open models side-by-side.</p>
+         <p className="recent-product-explanation" >Allows quickly testing multiple open models side-by-side.</p>
       
 
      </div>
