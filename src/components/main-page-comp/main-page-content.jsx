@@ -47,7 +47,7 @@ export default function MainPageContent() {
           <h3>Recent Shoutouts</h3>
 
           {recentProduct.map((product) => {
-            return <RecentShoutoutProductComp product={product} />;
+            return <RecentShoutoutProductComp key={product.id} product={product} />;
           })}
         </div>
       </div>
