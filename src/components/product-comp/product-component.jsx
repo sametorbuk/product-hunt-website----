@@ -14,19 +14,14 @@ export default function ProductComponent(props) {
   const [isModal2Open, setIsModal2Open] = useState(false);
 
   const { logo, name,explanation, count,firstbtn ,secondbtn,thirdbtn , photo , introduction}=props
-
-
-
-   const toggleModal1 = () => {
+ const toggleModal1 = () => {
       setIsModal1Open(!isModal1Open);
    }
 
    const toggleModal2 = () => {
     setIsModal2Open(!isModal2Open);
  }
-
-
-   const handleClickOutside = (event) => {
+const handleClickOutside = (event) => {
       if (event.target.closest('.signup-to-vote-screen' && event.target.closest(".product-more-info")) === null) {
         setIsModal1Open(false);
         setIsModal2Open(false);
@@ -36,12 +31,15 @@ export default function ProductComponent(props) {
  useEffect(() => {
       if (isModal1Open || isModal2Open) {
         document.addEventListener('mousedown', handleClickOutside);
+        window.addEventListener("scroll" , handleClickOutside)
       } else {
         document.removeEventListener('mousedown', handleClickOutside);
+        window.removeEventListener("scroll" , handleClickOutside)
       }
   
       return () => {
         document.removeEventListener('mousedown', handleClickOutside);
+        window.removeEventListener("scroll" , handleClickOutside)
       };
     }, [isModal1Open , isModal2Open]);
 
