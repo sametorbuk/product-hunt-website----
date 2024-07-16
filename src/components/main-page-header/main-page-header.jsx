@@ -4,12 +4,86 @@ import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBullhorn } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import HoveredComp from "./header-btn-hover-comp";
+import { faClock, faRocket, faMessage, faFire, faCalendar , faCompass } from "@fortawesome/free-solid-svg-icons";
+
+const hoveredCompData=[{
+ex1:"Coming soon",
+ex2:"Upcoming launches to watch",
+color:"green",
+code:faClock
+
+},{
+    ex1:"Launch archive",
+    ex2:"Most-loved launches by the community",
+    color:"red",
+    code:faRocket,
+    left:30
+
+},{
+    ex1:"Launch Guide",
+    ex2:"Checklists and pro tips for launching",
+    color:"blue",
+    code:faCompass,
+    left:30
+
+
+},{
+    ex1:"Discussions",
+    ex2:"Ask questions, find support, and connect",
+    color:"#fd6781",
+    code:faMessage,
+    left:30
+
+},{
+    ex1:"Streaks",
+    ex2:"The most active community members",
+    color:"red",
+    code:faFire,
+    left:30
+
+
+
+},{
+
+    ex1:"Events",
+    ex2:"Meet others online and in-person",
+    color:"green",
+    code:faCalendar,
+    left:30
+}
+]
+
+
+
 
 export default function MainPageHeader() {
+    const [hoveredLaunches, setHoveredLaunches] = useState(false);
+    const [isLaunchesDivHovered , setIsLaunchesDivHovered]=useState(false)
+
+    const [hoveredCommunity, setHoveredCommuntiy] = useState(false);
+    const [isCommunityDivHovered , setIsCommunityDivHovered]=useState(false)
+    
+    
     const [hovered, setHovered] = useState(false);
     const [isDivHovered, setIsDivHovered] = useState(false);
 
-    const handleMouseEnter = () => {
+const firstThree= hoveredCompData.slice(0,3)
+const secondThree=hoveredCompData.slice(3,6)
+
+const handleMouseLeaveLaunchesDiv = () => {
+        
+    if(!isLaunchesDivHovered) {
+        setIsLaunchesDivHovered(false);
+    }
+     };
+       
+
+
+
+   
+
+const handleMouseEnter = () => {
         setHovered(true);
     };
 
@@ -18,13 +92,7 @@ export default function MainPageHeader() {
         if(!isDivHovered) {
             setHovered(false);
         }
-        
-        
-        
-    };
-
-
-
+         };
 
 return(<>
 
@@ -36,15 +104,16 @@ return(<>
 </div>
 
 <nav className="header-nav">
-<button>Launches</button>
 
 
+<button  
+onMouseEnter={() => setHoveredLaunches(true)} 
+onMouseLeave={() => setHoveredLaunches(false)} >
+Launches</button>
 
 
-
-
-
-
+{(hoveredLaunches || isLaunchesDivHovered) && <HoveredComp array={firstThree} 
+stateChange={setIsLaunchesDivHovered}/>}
 
 
 
@@ -53,6 +122,7 @@ return(<>
 
 <button onMouseEnter={handleMouseEnter}
 onMouseLeave={handleMouseLeave} >Products</button>
+
 
 {(hovered || isDivHovered) &&  <div 
 
@@ -98,16 +168,27 @@ className="header-products-content">
 
 
 
-
-
-
-
-
-
-
-
 <button>News</button>
-<button>Community</button>
+
+
+
+
+<button 
+onMouseEnter={() => setHoveredCommuntiy(true)} 
+onMouseLeave={() => setHoveredCommuntiy(false)}
+>Community</button>
+
+{(hoveredCommunity || isCommunityDivHovered) && <HoveredComp array={secondThree} 
+stateChange={setIsCommunityDivHovered}/>}
+
+
+
+
+
+
+
+
+
 <button>Advertise</button>
 </nav>
 

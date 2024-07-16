@@ -1,0 +1,49 @@
+.hoverComp{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: rgb(238 238 238);
+    width: 20rem;
+    height: 9rem;
+    top: 3.5rem;
+    border-radius: 9px;
+    padding: 1rem;
+    gap: 1rem;
+    gap:1rem;
+    z-index: 10;
+}
+
+
+
+.row1{
+    display: flex;
+     align-items: center;
+     gap: 1.5rem;
+}
+
+
+
+.icon1 {
+    width: 3.3rem;
+    font-size: xx-large;
+}
+
+
+.row1Right p {
+    margin: 0;
+    color: gray;
+    font-size: small;
+}
+
+.row1Right p:hover{
+    text-decoration: underline;
+}
+
+
+
+
+.row1Right p:nth-child(1) {
+    margin: 0;
+    color: rgb(45, 45, 45);
+    
+}

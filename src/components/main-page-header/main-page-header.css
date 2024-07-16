@@ -77,10 +77,11 @@
     flex-direction: column;
     height: 35rem;
     width: 38rem;
-    background: #e0d8d8;
+    background:rgb(238 238 238);
     top: 3.3rem;
     z-index: 10;
     border-radius: 8px;
+
 }
 
 
@@ -140,4 +141,8 @@
 .left p {
     margin: 0;
     margin-bottom: 0.3rem;
+}
+
+.left p:hover{
+    text-decoration: underline;
 }
