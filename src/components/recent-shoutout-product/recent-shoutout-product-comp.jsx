@@ -7,7 +7,7 @@ export default function RecentShoutoutProductComp(props) {
   const { name, exp1, logo, exp2, platform } = product;
 
   return (
-    <>
+    <> 
       <div className="recent-product-comp-div">
         <div className="recent-product-info">
           <img className="recent-product-photo" src={logo} alt="" />
