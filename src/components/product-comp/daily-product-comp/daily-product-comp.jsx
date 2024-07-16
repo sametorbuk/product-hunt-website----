@@ -3,12 +3,13 @@ import React from 'react';
 import { sahteVeri } from "../../../sahteVeri";
 import ProductComponent from "../product-component"
 
+ 
 
-
-export default function DailyProductComp() {
+export default function DailyProductComp(props) {
+    const {data}=props
     return (
         <>
-            {sahteVeri.map((item) => (
+            {data.map((item) => (
                 <ProductComponent
                     key={item.name} 
                     logo={item.logo}

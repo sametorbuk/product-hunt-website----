@@ -15,6 +15,14 @@
 }
 
 
+.main-page-content-todays,
+.main-page-content-yesterdays{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+}
+
+
 
 .main-page-content-right{
     display: flex;
