@@ -41,3 +41,4 @@ DailyProductComp.propTypes = {
     })
   ).isRequired,
 };
+
