@@ -1,17 +1,18 @@
 .product-more-info {
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: column;
     background: rgb(254, 253, 253);
     width: 48rem;
-    height: 62rem;
-
+    height: 90rem;
+    min-height: 90rem;
     padding: 2rem 5rem;
     border: 1px solid red;
     z-index: 10;
     left: 50%;
-    top: calc(50% + 18rem);
+    top: calc(50% + 32rem);
     transform: translate(-50%, -50%);
+    overflow-y: auto;
 }
 
 

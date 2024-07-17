@@ -12,6 +12,7 @@ export default function ProductComponent(props) {
   const [isModal2Open, setIsModal2Open] = useState(false);
 
 
+  
 
 
 
@@ -53,6 +54,7 @@ export default function ProductComponent(props) {
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
+
 
     };
   }, [isModal1Open, isModal2Open]);
