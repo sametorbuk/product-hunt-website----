@@ -24,7 +24,16 @@ export default function ProductComponent(props) {
   } = props;
 
   const toggleModal1 = () => setIsModal1Open(!isModal1Open);
-  const toggleModal2 = () => setIsModal2Open(!isModal2Open);
+
+  const toggleModal2 = (e) => {
+    const value = e.target.innerText
+    if (value == firstbtn || value == secondbtn || value == thirdbtn) {
+      return
+    } else {
+      setIsModal2Open(!isModal2Open)
+    };
+  }
+
 
   const handleClickOutside = (event) => {
     if (
