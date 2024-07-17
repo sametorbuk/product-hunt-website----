@@ -1,28 +1,26 @@
-
-
-
-
-
 .product-more-info {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     background: rgb(254, 253, 253);
     width: 48rem;
     height: 62rem;
-    top: 7rem;
+
     padding: 2rem 5rem;
     border: 1px solid red;
     z-index: 10;
+    left: 50%;
+    top: calc(50% + 18rem);
+    transform: translate(-50%, -50%);
 }
 
 
-.product-more-info-title-row1{
+.product-more-info-title-row1 {
     display: flex;
 }
 
 
-.visit-btn{
+.visit-btn {
     width: 6rem;
     height: 4rem;
     border-radius: 6px;
@@ -32,7 +30,7 @@
     cursor: pointer;
 }
 
-.upvote-btn{
+.upvote-btn {
     width: 14rem;
     height: 4rem;
     background: #ee4211c4;
@@ -45,26 +43,27 @@
 
 
 
-.product-more-info-title-row1-left{
+.product-more-info-title-row1-left {
     display: flex;
     flex-direction: column;
     flex: 1;
-    
+
 }
 
 
 
 
-.product-more-info-interaction-line-div{
+.product-more-info-interaction-line-div {
     display: flex;
     margin-top: 1rem;
 }
 
 
-.product-more-info-interaction-line-div-interaction-btns{
+.product-more-info-interaction-line-div-interaction-btns {
     display: flex;
 }
-.product-more-info-interaction-line-div-interaction-btns button{
+
+.product-more-info-interaction-line-div-interaction-btns button {
     border: none;
     height: 2rem;
     color: gray;
@@ -73,8 +72,8 @@
 }
 
 
-.product-more-info-interaction-line-div-interaction-btns button:hover{
-    color:orange;
+.product-more-info-interaction-line-div-interaction-btns button:hover {
+    color: orange;
 }
 
 
@@ -99,12 +98,12 @@
 
 
 
-.commenters-photo-row{
+.commenters-photo-row {
     display: flex;
-    gap:1rem;
+    gap: 1rem;
 }
 
-.commenters-prof-photo-div{
+.commenters-prof-photo-div {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -119,7 +118,7 @@
 }
 
 
-.comment-area-input{
+.comment-area-input {
     flex: 2;
     border: none;
 }
