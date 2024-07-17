@@ -11,6 +11,12 @@ export default function ProductComponent(props) {
   const [isModal1Open, setIsModal1Open] = useState(false);
   const [isModal2Open, setIsModal2Open] = useState(false);
 
+
+
+
+
+
+
   const {
     logo,
     name,
@@ -39,15 +45,15 @@ export default function ProductComponent(props) {
   useEffect(() => {
     if (isModal1Open || isModal2Open) {
       document.addEventListener('mousedown', handleClickOutside);
-      window.addEventListener('scroll', handleClickOutside);
+
     } else {
       document.removeEventListener('mousedown', handleClickOutside);
-      window.removeEventListener('scroll', handleClickOutside);
+
     }
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
-      window.removeEventListener('scroll', handleClickOutside);
+
     };
   }, [isModal1Open, isModal2Open]);
 
@@ -120,7 +126,7 @@ export default function ProductComponent(props) {
             <button>
               <FontAwesomeIcon icon={faTwitter} style={{ color: '#74C0FC', fontSize: 'x-large' }} />
             </button>
-            
+
             <button>
               <FontAwesomeIcon icon={faFacebook} style={{ color: 'rgb(0 99 178 / 94%)', fontSize: 'x-large' }} />
             </button>
