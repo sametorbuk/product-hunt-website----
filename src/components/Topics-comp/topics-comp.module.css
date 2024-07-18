@@ -1,10 +1,11 @@
 .mainContent {
     display: flex;
     border: 1px solid red;
-    width: 89vw;
+    width: 79vw;
     background: rgb(186, 184, 184);
     height: 10rem;
-    padding: 4rem;
+    padding: 8rem;
+    padding-top: 2rem;
 }
 
 
@@ -49,4 +50,21 @@
     width: 8rem;
     border: 1px solid #80808094;
     border-radius: 6px;
+}
+
+
+
+.productByRankBtn {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.optionsBtn {
+    height: 2.3rem;
+    border-radius: 1rem;
+    border: 1px solid #80808021;
+    color: rgb(0 94 246);
+    font-weight: bold;
 }

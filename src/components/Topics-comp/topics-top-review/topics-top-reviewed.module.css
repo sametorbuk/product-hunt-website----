@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-content: space-between;
+    margin-top: 4rem;
 
 }
 
@@ -14,18 +15,37 @@
 
 
 
-.row1Right,
-.row1Left,
-.row2Left,
-.row2Right {
+
+.row1Left {
     display: flex;
     flex-direction: column;
 }
 
 
-.row1Leftrow1,
-.row1Rightrow1,
-.row2Leftrow1,
-.row2Rightrow1 {
+.row1Leftrow1 {
     display: flex;
+}
+
+
+
+.explanation {
+    flex: 0.5;
+}
+
+
+.img {
+    width: 4rem;
+    height: 4rem;
+}
+
+
+.userArea {
+    display: flex;
+    align-items: center;
+}
+
+.userPhoto {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 13px;
 }

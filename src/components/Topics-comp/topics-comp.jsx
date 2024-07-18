@@ -1,8 +1,12 @@
 import React from "react";
 import styles from "./topics-comp.module.css"
+import TopReviewedComp from "./topics-top-review/topics-top-reviewed";
+import RankComp from "./RankComp/product-rank-comp";
+import PropTypes from "prop-types";
 
+export default function TopicsPage(props) {
+    const { ranksProductData, topicsData } = props
 
-export default function TopicsComponent() {
 
     return (
 
@@ -13,8 +17,8 @@ export default function TopicsComponent() {
                     <div className={styles.headerRow1}>
 
                         <p>{`Topics >`} </p>
-                        <p>{`Development >`}</p>
-                        <p>Artifical Intelligence</p>
+                        <p>{`${topicsData.category} >`}</p>
+                        <p>{topicsData.topicname}</p>
 
                     </div>
 
@@ -24,20 +28,26 @@ export default function TopicsComponent() {
                         <button className={styles.followBtn}>Follow</button>
 
                     </div>
-                    <p>The future is AI. From poetry writing to
-                        tackling tedious tasks, AI apps can
-                        automate almost anything (yes, really)</p>
+                    <p>{topicsData.introduction}</p>
 
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
+                    <TopReviewedComp />
+
+                    <div className={styles.productByRankBtn}>
+
+                        <button className={styles.optionsBtn}>Most Loved</button>
+                        <button className={styles.optionsBtn} >Top Products</button>
+                        <button className={styles.optionsBtn} >Recent Review</button>
+
+
+
+
+
+                    </div>
+
+                    <RankComp ranksProductData={ranksProductData} />
+
+
+
                 </div>
 
 
@@ -72,3 +82,27 @@ export default function TopicsComponent() {
 
     )
 }
+
+
+TopicsPage.propTypes = {
+    ranksProductData: PropTypes.shape({
+        productName: PropTypes.string.isRequired,
+        logo: PropTypes.string.isRequired,
+        explanation: PropTypes.string.isRequired,
+        introduction: PropTypes.string.isRequired,
+        shoutoutCount: PropTypes.number.isRequired,
+        thoseWhoShoutOut: PropTypes.arrayOf(
+            PropTypes.shape({
+                img: PropTypes.string.isRequired,
+                who: PropTypes.string.isRequired,
+            })
+        ).isRequired,
+        moreCount: PropTypes.number.isRequired,
+        rankNumber: PropTypes.number.isRequired,
+    }).isRequired,
+    topicsData: PropTypes.shape({
+        category: PropTypes.string.isRequired,
+        topicname: PropTypes.string.isRequired,
+        introduction: PropTypes.string.isRequired,
+    }).isRequired,
+};
