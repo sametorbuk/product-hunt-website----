@@ -1,0 +1,42 @@
+.welcomeDiv {
+    display: flex;
+    flex-direction: column;
+    background: #e9e9e9b3;
+    padding: 1.5rem;
+    width: 41rem;
+    padding: 0rem 1.5rem;
+    padding-bottom: 1.5rem;
+    border-radius: 7px;
+    margin-top: 0.5rem;
+
+}
+
+
+.rowp {
+    display: flex;
+
+}
+
+.title {
+    margin: 0;
+}
+
+
+.p {
+    margin: 0;
+}
+
+.p2 {
+    color: rgb(10, 123, 244);
+    margin: 0;
+}
+
+
+.button {
+    width: 2rem;
+    background: none;
+    border: none;
+    font-weight: bolder;
+    font-size: x-large;
+    margin-left: 40rem;
+}

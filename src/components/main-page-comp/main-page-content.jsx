@@ -7,12 +7,18 @@ import RecentShoutoutProductComp from '../recent-shoutout-product/recent-shoutou
 import { recentProduct } from '../../recent-product-veri.js';
 import { sahteVeri } from '../../sahteVeri.js';
 import { YesterdaysData } from '../../yesterdays-top-data.js';
+import WelcomeComponent from './welcome-component/welcome-component.jsx';
 
 export default function MainPageContent() {
   return (
     <>
       <div className="main-page-content">
         <div className="main-page-content-left">
+
+          <WelcomeComponent />
+
+
+
           <div className="main-page-content-todays">
             <div className="main-page-content-left-row1">
               <h2 style={{ flex: '0.726' }}>Top Products Launching Today</h2>

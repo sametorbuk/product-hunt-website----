@@ -96,4 +96,3 @@ ProductMoreInfoComponent.propTypes = {
   explanation: PropTypes.string.isRequired,
   logo: PropTypes.string.isRequired,
 };
- 

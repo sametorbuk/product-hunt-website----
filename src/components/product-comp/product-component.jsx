@@ -7,6 +7,9 @@ import ProductMoreİnfoComponent from './product-more-info-comp';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+
+
+
 export default function ProductComponent(props) {
   const [isModal1Open, setIsModal1Open] = useState(false);
   const [isModal2Open, setIsModal2Open] = useState(false);
@@ -39,7 +42,7 @@ export default function ProductComponent(props) {
     if (
       event.target.closest('.signup-to-vote-screen') === null &&
       event.target.closest('.product-more-info') === null
-    )  {
+    ) {
       setIsModal1Open(false);
       setIsModal2Open(false);
     }
