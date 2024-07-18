@@ -44,7 +44,17 @@ export default function TopicsPage(props) {
 
                     </div>
 
-                    <RankComp ranksProductData={ranksProductData} />
+
+                    {ranksProductData.map((product, index) => {
+
+                        return (<>
+                            <RankComp key={index} product={product} />
+                        </>)
+
+
+                    })}
+
+
 
 
 
@@ -84,22 +94,25 @@ export default function TopicsPage(props) {
 }
 
 
+
 TopicsPage.propTypes = {
-    ranksProductData: PropTypes.shape({
-        productName: PropTypes.string.isRequired,
-        logo: PropTypes.string.isRequired,
-        explanation: PropTypes.string.isRequired,
-        introduction: PropTypes.string.isRequired,
-        shoutoutCount: PropTypes.number.isRequired,
-        thoseWhoShoutOut: PropTypes.arrayOf(
-            PropTypes.shape({
-                img: PropTypes.string.isRequired,
-                who: PropTypes.string.isRequired,
-            })
-        ).isRequired,
-        moreCount: PropTypes.number.isRequired,
-        rankNumber: PropTypes.number.isRequired,
-    }).isRequired,
+    ranksProductData: PropTypes.arrayOf(
+        PropTypes.shape({
+            productName: PropTypes.string.isRequired,
+            logo: PropTypes.string.isRequired,
+            explanation: PropTypes.string.isRequired,
+            introduction: PropTypes.string.isRequired,
+            shoutoutCount: PropTypes.number.isRequired,
+            thoseWhoShoutOut: PropTypes.arrayOf(
+                PropTypes.shape({
+                    img: PropTypes.string.isRequired,
+                    who: PropTypes.string.isRequired,
+                })
+            ).isRequired,
+            moreCount: PropTypes.number.isRequired,
+            rankNumber: PropTypes.number.isRequired,
+        })
+    ).isRequired,
     topicsData: PropTypes.shape({
         category: PropTypes.string.isRequired,
         topicname: PropTypes.string.isRequired,

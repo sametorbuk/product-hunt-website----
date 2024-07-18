@@ -7,10 +7,10 @@ import PropTypes from "prop-types";
 
 export default function RankComp(props) {
 
-    const { ranksProductData } = props
+    const { product } = props
 
-    const { productName, logo, explanation, introduction,
-        shoutoutCount, thoseWhoShoutOut, moreCount, rankNumber } = ranksProductData
+    const { productname, logo, explanation, introduction,
+        shoutoutCount, thoseWhoShoutOut, moreCount, rankNumber } = product
 
 
     return (<>
@@ -30,7 +30,7 @@ export default function RankComp(props) {
 
                 <div className={styles.contentRow1}>
 
-                    <p className={styles.productName}>{productName}</p>
+                    <p className={styles.productName}>{productname}</p>
                     <p>— {explanation}</p>
 
 
@@ -70,7 +70,7 @@ export default function RankComp(props) {
     </>)
 }
 RankComp.propTypes = {
-    ranksProductData: PropTypes.shape({
+    product: PropTypes.shape({
         productName: PropTypes.string.isRequired,
         logo: PropTypes.string.isRequired,
         explanation: PropTypes.string.isRequired,
@@ -86,3 +86,4 @@ RankComp.propTypes = {
         rankNumber: PropTypes.number.isRequired
     }).isRequired
 };
+
