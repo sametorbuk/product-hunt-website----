@@ -24,7 +24,7 @@ export default function TopicsPage(props) {
 
                     <div className={styles.titleAndBtn}>
 
-                        <h2>Artifical Intelligence</h2>
+                        <h2>{topicsData.topicname}</h2>
                         <button className={styles.followBtn}>Follow</button>
 
                     </div>
