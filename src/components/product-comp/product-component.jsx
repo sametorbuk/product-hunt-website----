@@ -39,7 +39,7 @@ export default function ProductComponent(props) {
     if (
       event.target.closest('.signup-to-vote-screen') === null &&
       event.target.closest('.product-more-info') === null
-    ) {
+    )  {
       setIsModal1Open(false);
       setIsModal2Open(false);
     }
