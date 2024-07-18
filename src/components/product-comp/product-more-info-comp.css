@@ -4,15 +4,16 @@
     flex-direction: column;
     background: rgb(254, 253, 253);
     width: 48rem;
-    height: 26rem;
+    height: 30rem;
 
     padding: 2rem 5rem;
-    border: 1px solid red;
+   
     z-index: 10;
     left: 50%;
     top: calc(50%);
     transform: translate(-50%, -50%);
     overflow-y: auto;
+    border-radius: 7px;
 }
 
 

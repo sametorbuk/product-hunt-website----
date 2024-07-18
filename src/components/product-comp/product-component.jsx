@@ -6,13 +6,15 @@ import { useState, useEffect } from 'react';
 import ProductMoreİnfoComponent from './product-more-info-comp';
 import PropTypes from 'prop-types';
 import React from 'react';
-
+import { useHistory } from 'react-router-dom/cjs/react-router-dom';
 
 
 
 export default function ProductComponent(props) {
   const [isModal1Open, setIsModal1Open] = useState(false);
   const [isModal2Open, setIsModal2Open] = useState(false);
+
+  const history = useHistory()
 
   const {
     logo,
@@ -64,6 +66,17 @@ export default function ProductComponent(props) {
     };
   }, [isModal1Open, isModal2Open]);
 
+
+  const routerClick = (event) => {
+
+    const value = event.target.innerText
+
+    history.push(`/topics/${value.replace(/\s+/g, '')}`)
+    
+
+
+  }
+
   return (
     <div className="product-main-div">
       <div onClick={toggleModal2} className="product-main-div-left">
@@ -79,9 +92,9 @@ export default function ProductComponent(props) {
               {count}
               <FontAwesomeIcon icon={faComment} style={{ color: '#616161' }} />
             </p>
-            <p className="product-component-center-row2-p">{firstbtn}</p>
-            <p className="product-component-center-row2-p">{secondbtn}</p>
-            <p className="product-component-center-row2-p">{thirdbtn}</p>
+            <p onClick={routerClick} className="product-component-center-row2-p">{firstbtn}</p>
+            <p onClick={routerClick} className="product-component-center-row2-p">{secondbtn}</p>
+            <p onClick={routerClick} className="product-component-center-row2-p">{thirdbtn}</p>
           </div>
         </div>
       </div>

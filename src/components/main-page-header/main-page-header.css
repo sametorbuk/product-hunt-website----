@@ -2,18 +2,18 @@
     display: flex;
     justify-content: space-between;
     padding: 1rem;
-    border-bottom: 1px solid gray;
-    border-top: 1px solid gray;
+    border-bottom: 1px solid #80808061;
+    border-top: 1px solid #80808075;
 }
 
 
 
-.main-page-header-left{
+.main-page-header-left {
     display: flex;
     gap: 1rem;
 }
 
-.header-nav{
+.header-nav {
     display: flex;
     gap: 1.5rem;
 }
@@ -25,14 +25,14 @@
 
 
 
-.main-page-header-sucscribe-and-sign-btn-div{
+.main-page-header-sucscribe-and-sign-btn-div {
     display: flex;
-    gap:1.5rem;
+    gap: 1.5rem;
 }
 
 
-.header-nav button:hover{
-    color:orange;
+.header-nav button:hover {
+    color: orange;
 }
 
 .header-nav button {
@@ -51,7 +51,7 @@
 }
 
 
-.main-page-header-sucscribe-and-sign-btn-div button:nth-child(2){
+.main-page-header-sucscribe-and-sign-btn-div button:nth-child(2) {
     background: #ee4211c4;
     border: none;
     color: white;
@@ -71,13 +71,13 @@
 
 
 
-.header-products-content{
+.header-products-content {
     position: absolute;
     display: flex;
     flex-direction: column;
     height: 35rem;
     width: 38rem;
-    background:rgb(238 238 238);
+    background: rgb(238 238 238);
     top: 3.3rem;
     z-index: 10;
     border-radius: 8px;
@@ -86,7 +86,7 @@
 
 
 
-.header-products-content-row1{
+.header-products-content-row1 {
     display: flex;
     padding: 1rem;
     align-items: center;
@@ -95,41 +95,41 @@
 }
 
 
-.bull-horn-icon{
-  font-size: xx-large;
+.bull-horn-icon {
+    font-size: xx-large;
     color: #098000cf;
     background: #04ea0424;
     width: 5rem;
     border-radius: 8px;
 }
 
-.bull-horn-icon:hover{
-    transform: scale(1.2); 
+.bull-horn-icon:hover {
+    transform: scale(1.2);
     font-size: xx-large;
-    background:white;
+    background: white;
 }
 
 
 
-.header-product-content-row1-right{
+.header-product-content-row1-right {
     display: flex;
     flex-direction: column;
-    gap:0;
+    gap: 0;
     cursor: pointer;
 }
 
 
 .header-product-content-row1-right p {
-    margin:0;
+    margin: 0;
 }
 
 
-.header-products-main-content{
+.header-products-main-content {
     display: flex;
 }
 
 
-.left{
+.left {
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
@@ -143,6 +143,6 @@
     margin-bottom: 0.3rem;
 }
 
-.left p:hover{
+.left p:hover {
     text-decoration: underline;
 }

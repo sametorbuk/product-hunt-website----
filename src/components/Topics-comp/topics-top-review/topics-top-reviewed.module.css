@@ -1,0 +1,31 @@
+.reviewDiv {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+
+}
+
+
+.row1,
+.row2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.row1Right,
+.row1Left,
+.row2Left,
+.row2Right {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.row1Leftrow1,
+.row1Rightrow1,
+.row2Leftrow1,
+.row2Rightrow1 {
+    display: flex;
+}

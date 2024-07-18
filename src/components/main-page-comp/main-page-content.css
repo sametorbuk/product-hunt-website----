@@ -16,15 +16,15 @@
 
 
 .main-page-content-todays,
-.main-page-content-yesterdays{
+.main-page-content-yesterdays {
     display: flex;
     flex-direction: column;
-    gap:2rem;
+    gap: 2rem;
 }
 
 
 
-.main-page-content-right{
+.main-page-content-right {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -32,7 +32,7 @@
 }
 
 
-.main-page-content-left-row1{
+.main-page-content-left-row1 {
     display: flex;
 }
 
@@ -46,14 +46,11 @@
     color: rgb(93, 92, 92);
 }
 
-.main-page-content-left-row1 button:focus{
+.main-page-content-left-row1 button:focus {
     color: #e12e;
 }
 
-.main-page-content-left-row1-btn{
+.main-page-content-left-row1-btn {
     display: flex;
-    margin-left: 10rem;
-    position: absolute;
-    left: 35rem;
-    top: 16.5rem;
+    margin-left: 25rem;
 }
