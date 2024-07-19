@@ -70,11 +70,6 @@ export default function MainPageHeader() {
   const firstThree = hoveredCompData.slice(0, 3);
   const secondThree = hoveredCompData.slice(3, 6);
 
-  const handleMouseLeaveLaunchesDiv = () => {
-    if (!isLaunchesDivHovered) {
-      setIsLaunchesDivHovered(false);
-    }
-  };
 
   const handleMouseEnter = () => {
     setHovered(true);

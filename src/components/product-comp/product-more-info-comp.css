@@ -2,12 +2,12 @@
     position: fixed;
     display: flex;
     flex-direction: column;
-    background: rgb(254, 253, 253);
+    background: rgb(186, 186, 186);
     width: 48rem;
     height: 30rem;
 
     padding: 2rem 5rem;
-   
+
     z-index: 10;
     left: 50%;
     top: calc(50%);

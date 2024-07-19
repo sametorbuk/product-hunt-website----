@@ -74,6 +74,7 @@ RankComp.propTypes = {
         productName: PropTypes.string.isRequired,
         logo: PropTypes.string.isRequired,
         explanation: PropTypes.string.isRequired,
+        productname: PropTypes.string.isRequired,
         introduction: PropTypes.string.isRequired,
         shoutoutCount: PropTypes.number.isRequired,
         thoseWhoShoutOut: PropTypes.arrayOf(
