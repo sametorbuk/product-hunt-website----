@@ -21,7 +21,7 @@ function LoginModals(props) {
     const [errors, setErrors] = useState({
         email: false,
         password: false,
-        terms: false,
+        terms: true,
         name: false
     })
 
@@ -29,6 +29,7 @@ function LoginModals(props) {
         email: "email is required",
         password: "password is required",
         name: "name is required",
+        terms: "please confirm"
     }
 
 
@@ -62,6 +63,13 @@ function LoginModals(props) {
         }
 
 
+        if (name === "checkbox") {
+            if (value === "checked") {
+                setErrors({ ...errors, [name]: false })
+            } else {
+                setErrors({ ...errors, [name]: true })
+            }
+        }
 
 
     }
@@ -107,7 +115,7 @@ function LoginModals(props) {
                         <FormGroup>
                             <label htmlFor="terms">I accept the terms and conditions</label>
                             <Input onChange={changeHandler} name="terms" type="checkbox" id="terms" />
-
+                            {errors.terms && <FormFeedback style={{ color: "red", display: "block" }}>{errormessages.terms}</FormFeedback>}
 
 
                         </FormGroup>
