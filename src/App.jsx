@@ -9,8 +9,6 @@ import { currentTopicsData } from './current-topics-data';
 
 
 import TopicsPage from './components/Topics-comp/topics-comp';
-import { useQuery } from '@apollo/client';
-import { POST_PRODUCTS } from './grapql-prodcut-veri';
 
 
 
@@ -18,22 +16,13 @@ import { POST_PRODUCTS } from './grapql-prodcut-veri';
 
 function App() {
 
-  const FetchDataExample = () => {
-    const { loading, error, data } = useQuery(POST_PRODUCTS);
 
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error: {error.message}</p>;
-
-    console.log(data);
-
-    return <div>Data fetched!</div>;
-  };
 
   return (
     <>
       <MainPageHeader />
 
-      <FetchDataExample />
+
 
       <Switch>
         <Route path="/" exact>

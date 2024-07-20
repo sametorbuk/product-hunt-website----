@@ -4,6 +4,15 @@ import TopReviewedComp from "./topics-top-review/topics-top-reviewed";
 import RankComp from "./RankComp/product-rank-comp";
 import PropTypes from "prop-types";
 
+import { communityImg } from "../../community-img-data";
+import Footer from "../footer-comp/footer-comp";
+
+const first10 = communityImg.slice(0, 10)
+const second10 = communityImg.slice(10, 20)
+const third10 = communityImg.slice(8, 18)
+const fourth10 = communityImg.slice(11, 21)
+
+
 export default function TopicsPage(props) {
     const { ranksProductData, topicsData } = props
 
@@ -76,7 +85,63 @@ export default function TopicsPage(props) {
 
 
             <div className={styles.rightContent}>
-                <p>samet</p>
+
+                <div className={styles.communityDiv}>
+                    <p className={styles.p}>PRODCUTIVITY COMMUNITY</p>
+
+                    <div className={styles.imgContainer}>
+
+                        {first10.map((item, index) => {
+                            return <img key={index} src={item} alt="" />
+                        })}
+
+
+                    </div>
+
+
+                    <div className={styles.imgContainer}>
+
+                        {second10.map((item, index) => {
+                            return <img key={index} src={item} alt="" />
+                        })}
+
+                    </div>
+
+
+                    <div className={styles.imgContainer}>
+
+                        {third10.map((item, index) => {
+                            return <img key={index} src={item} alt="" />
+                        })}
+
+
+
+                    </div>
+
+
+                    <div className={styles.imgContainer}>
+
+
+                        {fourth10.map((item, index) => {
+                            return <img key={index} src={item} alt="" />
+                        })}
+
+
+
+
+
+                    </div>
+
+
+
+
+
+                </div>
+
+
+                <Footer />
+
+
             </div>
 
 
