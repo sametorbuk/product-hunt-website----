@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormFeedback } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -32,25 +32,49 @@ function LoginModals(props) {
     }
 
 
-
-
-
     const changeHandler = (e) => {
-        const { name, value, type } = e.target
+        const { type, name, value } = e.target
         setSignUpFormData({ ...signUpFormData, [name]: type === "checkbox" ? "checked" : value })
-        if (name === "email") {
-            setErrors(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value));
-        } else if (name === "password") {
-            setErrors(value.length < 5)
-        } else if (name === "name") {
-            setErrors(value < 5)
+
+        if (name === "name") {
+            if (value.length < 5) {
+                setErrors({ ...errors, [name]: true })
+            } else {
+                setErrors({ ...errors, [name]: false })
+            }
         }
+
+        if (name === "password") {
+            if (value.length < 5) {
+                setErrors({ ...errors, [name]: true })
+            } else {
+                setErrors({ ...errors, [name]: false })
+            }
+        }
+
+        const validateEmail = (email) => {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        };
+
+        if (name === "email") {
+            setErrors({ ...errors, [name]: !(validateEmail(value)) })
+        }
+
+
+
+
     }
+
+
+
+
 
     const submitHandler = (e) => {
         e.preventDefault();
 
         console.log(signUpFormData)
+        console.log(errors)
 
     }
 
@@ -67,26 +91,30 @@ function LoginModals(props) {
                         <FormGroup>
                             <Label htmlFor='name' >Name</Label>
                             <Input onChange={changeHandler} name="name" type='name' id="name" placeholder='enter your name' />
-
-
+                            {errors.name && <FormFeedback style={{ color: "red", display: "block" }}>{errormessages.name}</FormFeedback>}
                         </FormGroup>
                         <FormGroup>
                             <Label for="email">Email</Label>
                             <Input onChange={changeHandler} type="email" name="email" id="email" placeholder="Enter your email" />
+                            {errors.email && <FormFeedback style={{ color: "red", display: "block" }}>{errormessages.email}</FormFeedback>}
                         </FormGroup>
                         <FormGroup>
                             <Label for="password">Password</Label>
                             <Input onChange={changeHandler} type="password" name="password" id="password" placeholder="Enter your password" />
+                            {errors.password && <FormFeedback style={{ color: "red", display: "block" }}>{errormessages.password}</FormFeedback>}
                         </FormGroup>
 
                         <FormGroup>
                             <label htmlFor="terms">I accept the terms and conditions</label>
-                            <Input onChange={changeHandler} checked={signUpFormData.terms} name="terms" type="checkbox" id="terms" />
+                            <Input onChange={changeHandler} name="terms" type="checkbox" id="terms" />
+
 
 
                         </FormGroup>
 
-                        <Button color="primary" type="submit">Submit</Button>
+                        <Button disabled={signUpFormData.email.length < 5
+                            || signUpFormData.name.length < 5 ||
+                            signUpFormData.password.length < 4} color="primary" type="submit">Submit</Button>
                     </Form>
                 </ModalBody>
                 <ModalFooter>
