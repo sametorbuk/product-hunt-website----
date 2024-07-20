@@ -4,8 +4,9 @@
     width: 90vw;
     background: white;
     height: 10rem;
-    padding: 8rem;
+    padding: 4rem;
     padding-top: 2rem;
+    padding-right: 0;
 }
 
 
@@ -22,7 +23,8 @@
     flex-direction: column;
     padding: 3rem;
     padding-right: 0;
-    max-width: 17rem;
+    width: 21rem;
+    flex: 0.2;
 }
 
 

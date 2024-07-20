@@ -12,9 +12,10 @@ import {
   faCalendar,
   faCompass,
 } from '@fortawesome/free-solid-svg-icons';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input } from 'reactstrap';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom';
+import LoginModals from '../login-form-comp/login-form-comp';
 
 
 
@@ -208,32 +209,7 @@ export default function MainPageHeader() {
 
 
           <button onClick={toggle} >Sign in</button>
-
-
-          <div>
-            <Modal isOpen={modal} toggle={toggle} >
-              <ModalHeader toggle={toggle}>Modal title</ModalHeader>
-              <ModalBody>
-                <Form >
-                  <FormGroup>
-                    <Label for="email">Email</Label>
-                    <Input type="email" name="email" id="email" placeholder="Enter your email" />
-                  </FormGroup>
-                  <FormGroup>
-                    <Label for="password">Password</Label>
-                    <Input type="password" name="password" id="password" placeholder="Enter your password" />
-                  </FormGroup>
-                  <Button color="primary" type="submit">Submit</Button>
-                </Form>
-              </ModalBody>
-              <ModalFooter>
-
-                <Button color="secondary" onClick={toggle}>
-                  Cancel
-                </Button>
-              </ModalFooter>
-            </Modal>
-          </div>
+          <LoginModals modal={modal} toggle={toggle} />
 
 
 
