@@ -12,6 +12,12 @@ import {
   faCalendar,
   faCompass,
 } from '@fortawesome/free-solid-svg-icons';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input } from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom';
+
+
+
 
 const hoveredCompData = [
   {
@@ -67,6 +73,17 @@ export default function MainPageHeader() {
   const [hovered, setHovered] = useState(false);
   const [isDivHovered, setIsDivHovered] = useState(false);
 
+
+  const [modal, setModal] = useState(false);
+
+  const toggle = () => setModal(!modal);
+
+  const history = useHistory();
+  const clickMainPageHandler = () => {
+    history.push("/")
+  }
+
+
   const firstThree = hoveredCompData.slice(0, 3);
   const secondThree = hoveredCompData.slice(3, 6);
 
@@ -84,8 +101,13 @@ export default function MainPageHeader() {
   return (
     <>
       <header className="main-page-header">
+
+
+
+
+
         <div className="main-page-header-left">
-          <img
+          <img onClick={clickMainPageHandler}
             className="main-page-logo"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5KFKNkfUtMNcGRswfmr_eh3RK9R9ix9wmSPbosLRAo9hLb0I8IoZb2jjXLQxj49PBzyQ&usqp=CAU"
             alt=""
@@ -177,8 +199,47 @@ export default function MainPageHeader() {
         </nav>
 
         <div className="main-page-header-sucscribe-and-sign-btn-div">
+
+
+
           <button>Subscribe</button>
-          <button>Sign in</button>
+
+
+
+
+          <button onClick={toggle} >Sign in</button>
+
+
+          <div>
+            <Modal isOpen={modal} toggle={toggle} >
+              <ModalHeader toggle={toggle}>Modal title</ModalHeader>
+              <ModalBody>
+                <Form >
+                  <FormGroup>
+                    <Label for="email">Email</Label>
+                    <Input type="email" name="email" id="email" placeholder="Enter your email" />
+                  </FormGroup>
+                  <FormGroup>
+                    <Label for="password">Password</Label>
+                    <Input type="password" name="password" id="password" placeholder="Enter your password" />
+                  </FormGroup>
+                  <Button color="primary" type="submit">Submit</Button>
+                </Form>
+              </ModalBody>
+              <ModalFooter>
+
+                <Button color="secondary" onClick={toggle}>
+                  Cancel
+                </Button>
+              </ModalFooter>
+            </Modal>
+          </div>
+
+
+
+
+
+
         </div>
       </header>
     </>

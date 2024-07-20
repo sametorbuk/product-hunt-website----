@@ -9,6 +9,7 @@ import { sahteVeri } from '../../sahteVeri.js';
 import { YesterdaysData } from '../../yesterdays-top-data.js';
 import WelcomeComponent from './welcome-component/welcome-component.jsx';
 
+
 export default function MainPageContent() {
   return (
     <>
@@ -55,6 +56,9 @@ export default function MainPageContent() {
           {recentProduct.map((product) => {
             return <RecentShoutoutProductComp key={product.id} product={product} />;
           })}
+
+
+
         </div>
       </div>
     </>
