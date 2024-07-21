@@ -33,12 +33,3 @@ export default function FocusNewComp(props) {
 }
 
 
-FocusNewComp.propTypes = {
-    item: PropTypes.shape({
-        author: PropTypes.string.isRequired,
-        author: PropTypes.string.isRequired,
-        urlToImage: PropTypes.string.isRequired,
-        publishedAt: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired,
-        title: PropTypes.string.isRequired,
-    }).isRequired,
