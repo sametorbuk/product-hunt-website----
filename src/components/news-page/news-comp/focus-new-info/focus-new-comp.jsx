@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "./focus-new-comp.module.css"
+import PropTypes from 'prop-types';
 
 
 export default function FocusNewComp(props) {
     const { item } = props
-    const { author, urlToImage, publishedAt, description, title, content } = item;
+    const { title } = item;
     return (<>
 
         <div className={styles.newsDetailsPage}>
@@ -33,3 +34,13 @@ export default function FocusNewComp(props) {
 }
 
 
+FocusNewComp.propTypes = {
+    item: PropTypes.shape({
+        author: PropTypes.string,
+        urlToImage: PropTypes.string,
+        publishedAt: PropTypes.string,
+        description: PropTypes.string,
+        title: PropTypes.string,
+        content: PropTypes.string
+    }).isRequired
+};
