@@ -1,0 +1,25 @@
+.newsDetailsPage {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    max-width: 100vw;
+}
+
+
+
+.title {
+    font-family: fantasy;
+}
+
+
+.mainImg {
+    width: 43rem;
+    margin-top: 3rem;
+}
+
+
+.imgAndContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

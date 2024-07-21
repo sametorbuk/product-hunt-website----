@@ -16,7 +16,7 @@ export default function NewsPage(props) {
 
     useEffect(() => {
         const fetchNews = () => {
-            const url = " https://newsapi.org/v2/everything?domains=techcrunch.com,thenextweb.com&apiKey=5890c5f9e4234175b9e7d4d36dbd17ad";
+            const url = " https://newsapi.org/v2/everything?domains=techcrunch.com,thenextweb.com&apiKey=9d7688ecd98143feb9f4032582dfd04d";
             console.log(error)
             axios.get(url)
                 .then(response => {
@@ -46,7 +46,7 @@ export default function NewsPage(props) {
 
 
     useEffect(() => {
-        const url = `https://newsapi.org/v2/top-headlines?q=${category}&apiKey=af2af317bc7b41ad9dcc4e30654c06f5`;
+        const url = `https://newsapi.org/v2/top-headlines?q=${category}&apiKey=9d7688ecd98143feb9f4032582dfd04d`;
         const fetchNews = () => {
 
             console.log(error)
@@ -67,9 +67,12 @@ export default function NewsPage(props) {
         fetchNews();
     }, [category]);
 
-    const firstFour = news.slice(0, 4)
-    const secondFour = news.slice(4, 8)
-    const thirdFour = news.slice(8, 12)
+
+    const cleanedNews = news.filter((item) => item.publishedAt !== "1970-01-01T00:00:00Z")
+
+    const firstFour = cleanedNews.slice(0, 4)
+    const secondFour = cleanedNews.slice(4, 8)
+    const thirdFour = cleanedNews.slice(8, 12)
 
 
     return (<>
@@ -83,6 +86,7 @@ export default function NewsPage(props) {
             <button value="science" onClick={newCategoryClickHandler} >SCIENCE </button>
             <button value="health" onClick={newCategoryClickHandler} >HEALTH </button>
             <button value="business" onClick={newCategoryClickHandler} >BUSINESS </button>
+            <button value="bitcoin" onClick={newCategoryClickHandler} >BITCOIN </button>
 
 
         </div>

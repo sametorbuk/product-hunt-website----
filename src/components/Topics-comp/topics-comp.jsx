@@ -163,7 +163,7 @@ export default function TopicsPage(props) {
 TopicsPage.propTypes = {
     ranksProductData: PropTypes.arrayOf(
         PropTypes.shape({
-            productName: PropTypes.string.isRequired,
+
             logo: PropTypes.string.isRequired,
             explanation: PropTypes.string.isRequired,
             introduction: PropTypes.string.isRequired,
