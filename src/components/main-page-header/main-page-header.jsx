@@ -32,35 +32,35 @@ const hoveredCompData = [
     ex2: 'Most-loved launches by the community',
     color: 'red',
     code: faRocket,
-    left: 30,
+
   },
   {
     ex1: 'Launch Guide',
     ex2: 'Checklists and pro tips for launching',
     color: 'blue',
     code: faCompass,
-    left: 30,
+
   },
   {
     ex1: 'Discussions',
     ex2: 'Ask questions, find support, and connect',
     color: '#fd6781',
     code: faMessage,
-    left: 30,
+
   },
   {
     ex1: 'Streaks',
     ex2: 'The most active community members',
     color: 'red',
     code: faFire,
-    left: 30,
+
   },
   {
     ex1: 'Events',
     ex2: 'Meet others online and in-person',
     color: 'green',
     code: faCalendar,
-    left: 30,
+
   },
 ];
 
@@ -180,7 +180,7 @@ export default function MainPageHeader() {
             </div>
           )}
 
-          <button>News</button>
+          <button onClick={() => history.push("/news")}>News</button>
 
           <button
             onMouseEnter={() => setHoveredCommuntiy(true)}

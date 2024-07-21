@@ -9,6 +9,7 @@ import { currentTopicsData } from './current-topics-data';
 
 
 import TopicsPage from './components/Topics-comp/topics-comp';
+import NewsPage from './components/news-page/news-page-comp';
 
 
 
@@ -45,7 +46,11 @@ function App() {
 
         })}
 
+        <Route path="/news">
 
+          <NewsPage />
+
+        </Route>
 
 
       </Switch>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormFeedback } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import PropTypes from 'prop-types';
 
 const initialvalues = {
     email: "",
@@ -92,7 +92,7 @@ function LoginModals(props) {
     return (
         <div>
             <Modal isOpen={modal} toggle={toggle} >
-                <ModalHeader toggle={toggle}>Modal title</ModalHeader>
+                <ModalHeader toggle={toggle}>SIGN FORM</ModalHeader>
                 <ModalBody>
                     <Form onSubmit={submitHandler}>
 
@@ -135,5 +135,14 @@ function LoginModals(props) {
         </div>
     );
 }
+
+LoginModals.propTypes = {
+    modal: PropTypes.bool.isRequired,
+    toggle: PropTypes.func.isRequired,
+};
+
+
+
+
 
 export default LoginModals;

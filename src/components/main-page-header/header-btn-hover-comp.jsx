@@ -11,6 +11,7 @@ export default function HoveredComp(props) {
       onMouseEnter={() => stateChange(true)}
       onMouseLeave={() => stateChange(false)}
       className={styles.hoverComp}
+      style={{left:""}}
     >
       {array.map((item, index) => (
         <div key={index} className={styles.row1}>
