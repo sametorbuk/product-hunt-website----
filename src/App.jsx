@@ -10,6 +10,7 @@ import { currentTopicsData } from './current-topics-data';
 
 import TopicsPage from './components/Topics-comp/topics-comp';
 import NewsPage from './components/news-page/news-page-comp';
+import ScrollToTopOnPageChange from './components/main-page-header/scrooll-to-top-page/scroll-top-page';
 
 
 
@@ -24,6 +25,7 @@ function App() {
       <MainPageHeader />
 
 
+      <ScrollToTopOnPageChange />
 
       <Switch>
         <Route path="/" exact>
