@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './App.css';
 
@@ -11,13 +11,14 @@ import { currentTopicsData } from './current-topics-data';
 import TopicsPage from './components/Topics-comp/topics-comp';
 import NewsPage from './components/news-page/news-page-comp';
 import ScrollToTopOnPageChange from './components/main-page-header/scrooll-to-top-page/scroll-top-page';
+import FocusNewComp from './components/news-page/news-comp/focus-new-info/focus-new-comp';
 
 
 
 
 
 function App() {
-
+  const [focusNewInfo, setFocusNewInfo] = useState(null)
 
 
   return (
@@ -50,7 +51,13 @@ function App() {
 
         <Route path="/news">
 
-          <NewsPage />
+          <NewsPage setFocusNewInfo={setFocusNewInfo} />
+
+        </Route>
+
+        <Route path="/news-topic/details">
+
+          <FocusNewComp item={focusNewInfo} />
 
         </Route>
 

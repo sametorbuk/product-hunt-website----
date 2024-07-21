@@ -1,13 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "./news-comp.module.css";
+import { useHistory } from "react-router-dom/cjs/react-router-dom";
+
+
 
 function NewsComp(props) {
-    const { item } = props;
+    const { item, setFocusNewInfo } = props;
     const { author, urlToImage, publishedAt, description, title } = item;
+    const history = useHistory()
+
+
+    const clickNewsInfoHandler = () => {
+        setFocusNewInfo(item)
+        history.push(`/news-topic/details`)
+    }
 
     return (
-        <div className={styles.newsDiv}>
+        <div onClick={clickNewsInfoHandler} className={styles.newsDiv}>
             <img className={styles.newsImg} src={urlToImage} alt="" />
             <p className={styles.title}>{title}</p>
             <p>{description}</p>

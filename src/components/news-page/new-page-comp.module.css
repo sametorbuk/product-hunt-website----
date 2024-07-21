@@ -17,4 +17,29 @@
     display: flex;
     margin-bottom: 3rem;
     gap: 2rem;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+
+
+
+.newsOptions button {
+    background: #ee4211c4;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+}
+
+
+
+.categoryBtn {
+    background: #ee4211c4;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    margin-left: 33rem;
+
 }

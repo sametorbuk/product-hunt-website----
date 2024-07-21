@@ -4,7 +4,9 @@ import { useState, useEffect } from "react";
 import NewsComp from "./news-comp/news-comp";
 import styles from "./new-page-comp.module.css"
 
-export default function NewsPage() {
+export default function NewsPage(props) {
+    const { setFocusNewInfo } = props
+
 
     const [news, setNews] = useState([]);
     const [error, setError] = useState(null);
@@ -71,17 +73,24 @@ export default function NewsPage() {
 
 
     return (<>
+
+        <button className={styles.categoryBtn}> NEWS CATEGORIES</button>
+
         <div className={styles.newsOptions}>
-            <button onClick={clickHandler}>GENERAL NEWS</button>
-            <button value="trump" onClick={newCategoryClickHandler}>TRUMP NEWS</button>
-            <button value="technology" onClick={newCategoryClickHandler}>TECHNOLOGY NEWS</button>
-            <button value="science" onClick={newCategoryClickHandler} >SCIENCE NEWS</button>
+            <button onClick={clickHandler}>GENERAL</button>
+            <button value="trump" onClick={newCategoryClickHandler}>TRUMP </button>
+            <button value="technology" onClick={newCategoryClickHandler}>TECHNOLOGY </button>
+            <button value="science" onClick={newCategoryClickHandler} >SCIENCE </button>
+            <button value="health" onClick={newCategoryClickHandler} >HEALTH </button>
+            <button value="business" onClick={newCategoryClickHandler} >BUSINESS </button>
+
+
         </div>
         <div className={styles.newsPage}>
 
             <div className={styles.row}>
                 {firstFour.map((item, index) => {
-                    return <NewsComp key={index} item={item} />
+                    return <NewsComp setFocusNewInfo={setFocusNewInfo} key={index} item={item} />
                 })}
 
             </div>
@@ -89,7 +98,7 @@ export default function NewsPage() {
 
             <div className={styles.row}>
                 {secondFour.map((item, index) => {
-                    return <NewsComp key={index} item={item} />
+                    return <NewsComp setFocusNewInfo={setFocusNewInfo} key={index} item={item} />
                 })}
 
             </div>
@@ -97,7 +106,7 @@ export default function NewsPage() {
 
             <div className={styles.row}>
                 {thirdFour.map((item, index) => {
-                    return <NewsComp key={index} item={item} />
+                    return <NewsComp setFocusNewInfo={setFocusNewInfo} key={index} item={item} />
                 })}
 
             </div>
