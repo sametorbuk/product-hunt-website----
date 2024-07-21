@@ -1,6 +1,6 @@
 .row {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 
@@ -10,5 +10,11 @@
 .newsPage {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
+}
+
+.newsOptions {
+    display: flex;
+    margin-bottom: 3rem;
     gap: 2rem;
 }

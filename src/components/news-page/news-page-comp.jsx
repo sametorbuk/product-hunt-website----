@@ -10,6 +10,8 @@ export default function NewsPage() {
     const [error, setError] = useState(null);
     const [istek, setIstek] = useState(0)
 
+    const [category, setCategory] = useState("")
+
     useEffect(() => {
         const fetchNews = () => {
             const url = " https://newsapi.org/v2/everything?domains=techcrunch.com,thenextweb.com&apiKey=5890c5f9e4234175b9e7d4d36dbd17ad";
@@ -31,23 +33,50 @@ export default function NewsPage() {
         fetchNews();
     }, [istek]);
 
-
     const clickHandler = () => {
         setIstek(istek + 1)
     }
 
+
+    const newCategoryClickHandler = (e) => {
+        setCategory(e.target.value)
+    }
+
+
+    useEffect(() => {
+        const url = `https://newsapi.org/v2/top-headlines?q=${category}&apiKey=af2af317bc7b41ad9dcc4e30654c06f5`;
+        const fetchNews = () => {
+
+            console.log(error)
+            axios.get(url)
+                .then(response => {
+                    if (response.status !== 200) {
+                        throw new Error('Request failed with status ' + response.status);
+                    }
+                    setNews(response.data.articles);
+                    console.log(news)
+                })
+                .catch(error => {
+                    setError(error.message);
+
+                });
+        };
+
+        fetchNews();
+    }, [category]);
 
     const firstFour = news.slice(0, 4)
     const secondFour = news.slice(4, 8)
     const thirdFour = news.slice(8, 12)
 
 
-
-
     return (<>
-
-        <button onClick={clickHandler}>YENİ REQUEST GÖNDER</button>
-
+        <div className={styles.newsOptions}>
+            <button onClick={clickHandler}>GENERAL NEWS</button>
+            <button value="trump" onClick={newCategoryClickHandler}>TRUMP NEWS</button>
+            <button value="technology" onClick={newCategoryClickHandler}>TECHNOLOGY NEWS</button>
+            <button value="science" onClick={newCategoryClickHandler} >SCIENCE NEWS</button>
+        </div>
         <div className={styles.newsPage}>
 
             <div className={styles.row}>

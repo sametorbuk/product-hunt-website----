@@ -30,12 +30,12 @@ function App() {
           <MainPageContent />
         </Route>
 
-        {currentTopicsData.map((topic) => {
+        {currentTopicsData.map((topic, index) => {
           const cleanedValue = topic.name.replace(/\s+/g, '');
 
           return (
 
-            <Route key={topic.name} path={`/topics/${cleanedValue}`}>
+            <Route key={index} path={`/topics/${cleanedValue}`}>
 
               <TopicsPage topicsData={topic.topicsData} ranksProductData={topic.ranksProductData} />
 
