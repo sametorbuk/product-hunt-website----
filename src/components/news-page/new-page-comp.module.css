@@ -1,0 +1,14 @@
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+.newsPage {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}

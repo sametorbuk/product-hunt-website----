@@ -1,0 +1,43 @@
+.newsDiv {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    max-width: 17rem;
+    text-align: left;
+    align-items: center;
+}
+
+
+
+
+.newsImg {
+    width: 17rem;
+    height: 10rem;
+}
+
+
+
+.title {
+    font-weight: bold;
+}
+
+
+
+.info {
+    display: flex;
+    justify-content: space-between;
+
+    flex-direction: column;
+    margin-left: 0;
+
+}
+
+
+
+.authorAndDate {
+    display: flex;
+}
+
+.left {
+    font-weight: bold;
+}
